@@ -12,7 +12,8 @@ public class Second {
             int a = Integer.parseInt(line[0]);
             int b = Integer.parseInt(line[1]);
             map.put(a, map.getOrDefault(a, 0) + b);
-            if (map.get(a) != 1 || map.get(a) != -1) {
+            if (map.get(a) != 1 && map.get(a) != -1 && map.get(a) != 0) {
+                System.out.println(a + " " + map.get(a));
                 System.out.println("YES");
                 return;
             }
